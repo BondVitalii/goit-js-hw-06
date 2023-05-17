@@ -8,6 +8,21 @@ const ingredients = [
 ];
 
 const list = document.querySelector('#ingredients');
+
+const arrayLi = ingredients.map(ingredient => {
+  const itemEl = document.createElement('li');
+  itemEl.classList.add(`item`);
+  itemEl.textContent = ingredient;
+  return itemEl;
+});
+
+list.append(...arrayLi);
+
+// ----------
+
+/** Решения до проверки ----------
+
+const list = document.querySelector('#ingredients');
 const arrayLi = [];
 
 ingredients.forEach(ingredient => {
@@ -24,6 +39,8 @@ ingredients.forEach(ingredient => {
 list.append(...arrayLi);
 
 console.log(arrayLi);
+
+*/
 
 // ----------
 
