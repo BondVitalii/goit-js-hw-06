@@ -1,13 +1,4 @@
-const input = document.querySelector('#font-size-control');
-const spanText = document.querySelector('#text');
-spanText.style.fontSize = input.value + 'px';
-input.addEventListener('input', () => {
-  spanText.style.fontSize = input.value + 'px';
-});
-
-// ----------
-
-/** Задание 7
+/** Задание 7 ----------
 
 Напиши скрипт, который реагирует на изменение значения input#font-size-control (событие input) и изменяет инлайн-стиль span#text обновляя свойство font-size. В результате при перетаскивании ползунка будет меняться размер текста.
 
@@ -16,3 +7,12 @@ input.addEventListener('input', () => {
 <span id="text">Abracadabra!</span>
 
 */
+
+const input = document.querySelector('#font-size-control');
+const spanText = document.querySelector('#text');
+
+spanText.style.fontSize = input.value + 'px';
+
+input.addEventListener('input', () => {
+  spanText.style.fontSize = input.value + 'px';
+});
